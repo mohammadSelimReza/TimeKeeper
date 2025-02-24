@@ -1,0 +1,62 @@
+# Python
+*.pyc
+__pycache__/
+**__pycache__/
+*.pyo
+*.pyd
+*.py,cover
+*.so
+*.egg-info/
+*.egg
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Environment and configuration
+.env
+.venv/
+venv/
+env/
+*.env.local
+*.env.*
+settings/local.py
+
+# IDE and editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.sublime-workspace
+
+# Node.js and frontend (if applicable)
+node_modules/
+package-lock.json
+yarn.lock
+webpack-stats.json
+
+# Database
+*.db
+*.sql
+*.sqlite
+
+# Testing and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+test-results/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+*.swo
+*.log
+*.pid
+*.pot
+*.mo
