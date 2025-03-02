@@ -1,4 +1,6 @@
 from .base import *
+
+ROOT_URLCONF = '_core.urls'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

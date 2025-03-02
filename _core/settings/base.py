@@ -49,7 +49,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-ROOT_URLCONF = '_core.urls'
+
 
 TEMPLATES = [
     {
