@@ -1,12 +1,4 @@
-"""
-ASGI config for _core project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.1/howto/deployment/asgi/
-"""
-
+# async server gateway interface (real time likely used in websockets)
 import os
 
 from django.core.asgi import get_asgi_application

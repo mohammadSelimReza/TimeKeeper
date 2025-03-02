@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="flex items-center gap-4 [&>a:hover]:underline">
+    <div class="flex flex-row items-center gap-1">
+        {% if user not in post.liked.all %}
+        <img
+            class="w-5 -mt-1"
+            src="https://img.icons8.com/small/24/000000/fire-heart.png"
+        />
+        {% else %}
+        <img
+            class="w-5 -mt-1"
+            src="https://img.icons8.com/plasticine/100/fire-heart.png"
+        />
+        {% endif %}
+      <div id="like-{{post.post_id}}">{{post.liked.count}}</div>
+    </div>
+    <a class="text-blue-900 cursor-pointer" hx-get="{% url 'likePost' post.post_id %}" hx-target="closest div" hx-swap="outerHTML">
+      {% if request.user in post.liked.all %}
+          Liked
+      {% else %}
+          Like
+      {% endif %}
+    </a>
+    
+</div>

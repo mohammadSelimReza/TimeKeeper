@@ -1,0 +1,24 @@
+{% include "layouts/b.html" %}
+{% load tailwind_filters %}
+{% block content %}
+<div class="max-w-3xl mx-auto">
+    <h1>Edit Post</h1>
+<div class="card p-4">
+    <div class="flex items-center mb-4">
+        <img class="w-20 h-20 object-cover rounded-xl mr-4" src="{{post.image}} ">
+        <h3 class="text-lg font-bold">{{post.title}} </h3>
+    </div>
+    
+    <div class="pb-2">
+        <form method='POST'>
+            {{form | crispy}}
+            <div class="pt-4">
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+                <a class="button secondaryAction ml-1" href="{{request.META.HTTP_REFERER}}">Go Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
